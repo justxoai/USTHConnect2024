@@ -1,5 +1,4 @@
-USTH ICT 2024 Group Project
-"# USTHConnect2024" 
+USTH ICT 2024 Group Project: USTHConnect
 =====================================================
 
 Note
