@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -35,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
-        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+        SharedPreferences sharedPreferences = getSharedPreferences("Islogin", MODE_PRIVATE);
+        boolean isLoggedIn = sharedPreferences.getBoolean("IsLoggedIn", false);
 
         if (!isLoggedIn) {
             navigateToLoginFragment();
@@ -44,15 +45,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mDrawerLayout = findViewById(R.id.main);
-        ImageView mImageView = findViewById(R.id.imageView);
-        NavigationView mainNav = findViewById(R.id.main_nav);
+        ImageButton mImageView = findViewById(R.id.menu_button);
+        NavigationView mainNav = findViewById(R.id.home_nav);
 
         mviewPager = findViewById(R.id.view_pager);
         bottomNavigationView = findViewById(R.id.home_bottom_navigation);
 
         Fragment_home_changing adapter = new Fragment_home_changing(getSupportFragmentManager(), getLifecycle());
         mviewPager.setAdapter(adapter);
-//        mviewPager.setUserInputEnabled(false);
+        mviewPager.setUserInputEnabled(false);
 
         mviewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
 
@@ -105,9 +106,9 @@ public class MainActivity extends AppCompatActivity {
 
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 if (mDrawerLayout != null && !mDrawerLayout.isDrawerOpen(GravityCompat.END)) {
-                    mDrawerLayout.openDrawer(GravityCompat.END);
+                    mDrawerLayout.openDrawer(GravityCompat.START);
                 }
             }
         });
