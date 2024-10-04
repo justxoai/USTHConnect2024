@@ -3,12 +3,12 @@ USTH ICT 2024 Group Project: USTHConnect
 
 Note
 =======================
-Today: Update: Bottom Navigator in Homepage and Testing: Navigator Drawer
+Today: Update: Testting complete
 
-Report: Some error from navigator drawer
+Report: Wrong ID for Navigator Drawer
 
-Reason: Wrong code or Out of RAM
+Reason: Wrong code 
 
-Tomorow: If Testing not done, sketch 3 fragment and header of Drawer
+Tomorow: Sketch 3 fragment and header of Drawer
 
-Ask: Why testing got bug?
+Ask: 
