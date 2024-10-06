@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Side_navigator"
     android:orientation="vertical"
     android:background="@color/navigator_drawer_task_background">
 
@@ -24,9 +26,9 @@
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:background="@drawable/usthconnect"/>
-            
+
         </androidx.cardview.widget.CardView>
-        
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,6 +47,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/to_home_page"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:orientation="horizontal">
@@ -72,6 +75,7 @@
             android:background="@color/black"/>
 
         <LinearLayout
+            android:id="@+id/to_schedule_page"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:orientation="horizontal">
