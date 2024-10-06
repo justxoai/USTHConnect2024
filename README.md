@@ -3,12 +3,12 @@ USTH ICT 2024 Group Project: USTHConnect
 
 Note
 =======================
-Today: 
+Today: Create 3 fragment, but not content in it because don't have blue-print
 
-Report:
+Report: Done: Home, Notifi, Profile, Navigator Drawer
 
 Reason: 
 
-Tomorow: Sketch 3 fragment and header of Drawer
+Tomorow: Make button to fragment and activity
 
-Ask: 
+Ask: Can make menu icon in each app bar? so that when change page , the icon will got trans(?)
