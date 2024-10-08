@@ -3,12 +3,12 @@ USTH ICT 2024 Group Project: USTHConnect
 
 Note
 =======================
-Today: Create 3 fragment, but not content in it because don't have blue-print
+Today: Create Drawer Navigator for each Fragment so that it won't fight with back button
 
-Report: Done: Home, Notifi, Profile, Navigator Drawer
+Report: When click to another button in Bottom Navigator, the Drawer still there
 
-Reason: 
+Reason: I forget to close it when click to another button ?
 
-Tomorow: Make button to fragment and activity
+Tomorow: Make it to all
 
-Ask: Can make menu icon in each app bar? so that when change page , the icon will got trans(?)
+Ask: 
