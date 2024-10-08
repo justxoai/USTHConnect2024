@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
 
+    private LinearLayout tohomepage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mDrawerLayout = findViewById(R.id.main);
-        ImageButton mImageView = findViewById(R.id.menu_button);
+//        ImageButton mImageView = findViewById(R.id.menu_button);
         NavigationView mainNav = findViewById(R.id.home_nav);
 
         mviewPager = findViewById(R.id.view_pager);
@@ -50,6 +53,16 @@ public class MainActivity extends AppCompatActivity {
         Fragment_home_changing adapter = new Fragment_home_changing(getSupportFragmentManager(), getLifecycle());
         mviewPager.setAdapter(adapter);
         mviewPager.setUserInputEnabled(false);
+
+        tohomepage = findViewById(R.id.to_home_page);
+        tohomepage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mviewPager.setCurrentItem(0);
+
+                mDrawerLayout.closeDrawer(GravityCompat.START);
+            }
+        });
 
         mviewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
 
@@ -100,14 +113,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mDrawerLayout != null && !mDrawerLayout.isDrawerOpen(GravityCompat.END)) {
-                    mDrawerLayout.openDrawer(GravityCompat.START);
-                }
-            }
-        });
+//        mImageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (mDrawerLayout != null && !mDrawerLayout.isDrawerOpen(GravityCompat.END)) {
+//                    mDrawerLayout.openDrawer(GravityCompat.START);
+//                }
+//            }
+//        });
+
 
     }
 
@@ -118,4 +132,5 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(android.R.id.content, loginFragment);
         transaction.commit();
     }
+
 }
