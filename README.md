@@ -3,12 +3,12 @@ USTH ICT 2024 Group Project: USTHConnect
 
 Note
 =======================
-Today: Create Drawer Navigator for each Fragment: Done
+Today: Create 3 fragment for Schedule
 
 Report: When click to another button in Bottom Navigator, the Drawer still there
 
-Reason: Still don't know
+Reason: 
 
-Tomorow: 
+Tomorow: Create 3 fragment for Campus and Resourse 
 
 Ask: 
