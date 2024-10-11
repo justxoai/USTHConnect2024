@@ -25,10 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
 
-    private DrawerLayout mDrawerLayout;
-
-    private LinearLayout tohomepage;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,26 +39,12 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        mDrawerLayout = findViewById(R.id.main);
-//        ImageButton mImageView = findViewById(R.id.menu_button);
-        NavigationView mainNav = findViewById(R.id.home_nav);
-
         mviewPager = findViewById(R.id.view_pager);
         bottomNavigationView = findViewById(R.id.home_bottom_navigation);
 
         Fragment_home_changing adapter = new Fragment_home_changing(getSupportFragmentManager(), getLifecycle());
         mviewPager.setAdapter(adapter);
         mviewPager.setUserInputEnabled(false);
-
-        tohomepage = findViewById(R.id.to_home_page);
-        tohomepage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mviewPager.setCurrentItem(0);
-
-                mDrawerLayout.closeDrawer(GravityCompat.START);
-            }
-        });
 
         mviewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
 
@@ -112,15 +94,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-//        mImageView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (mDrawerLayout != null && !mDrawerLayout.isDrawerOpen(GravityCompat.END)) {
-//                    mDrawerLayout.openDrawer(GravityCompat.START);
-//                }
-//            }
-//        });
 
 
     }

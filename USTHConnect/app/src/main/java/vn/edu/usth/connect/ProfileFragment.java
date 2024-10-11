@@ -14,7 +14,7 @@ import android.widget.ImageButton;
 
 public class ProfileFragment extends Fragment {
 
-
+    private DrawerLayout mDrawerLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,7 +24,7 @@ public class ProfileFragment extends Fragment {
 
         ImageButton mImageView = v.findViewById(R.id.menu_button);
 
-        DrawerLayout mDrawerLayout = v.findViewById(R.id.profile_page);
+        mDrawerLayout = v.findViewById(R.id.profile_page);
 
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,5 +36,11 @@ public class ProfileFragment extends Fragment {
         });
 
         return v;
+    }
+
+    public void closeDrawer() {
+        if (mDrawerLayout != null && mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+            mDrawerLayout.closeDrawer(GravityCompat.START);
+        }
     }
 }
