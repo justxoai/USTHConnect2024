@@ -15,18 +15,16 @@ public class Fragment_map_changing extends FragmentStateAdapter {
         public Fragment createFragment(int position) {
             switch (position) {
                 case 0:
-                return new DashboardFragment();
+                return new Building_Fragment();
                 case 1:
-                return new NotificationFragment();
-                case 2:
-                return new ProfileFragment();
+                return new Map_Fragment();
                 default:
-                return new DashboardFragment();
+                return new Building_Fragment();
             }
         }
 
         @Override
         public int getItemCount() {
-            return 3;
+            return 2;
         }
 }

@@ -187,7 +187,7 @@
                         android:background="@color/black"/>
 
                     <LinearLayout
-                        android:id="@+id/to_result_page"
+                        android:id="@+id/to_resource_page"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:orientation="horizontal">
@@ -202,35 +202,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Cumulative Results"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:gravity="center"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/black"/>
-
-                    <LinearLayout
-                        android:id="@+id/to_appointment_page"
-                        android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/appointment"
-                            android:layout_marginLeft="25dp"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Professor Appointment"
+                            android:text="Resource"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:gravity="center"/>
@@ -259,34 +231,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="Study Buddies"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            android:gravity="center"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@color/black"/>
-
-                    <LinearLayout
-                        android:id="@+id/to_club_page"
-                        android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_gravity="center_vertical"
-                            android:src="@drawable/club"
-                            android:layout_marginLeft="25dp"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Clubs"
                             android:textColor="@color/black"
                             android:textSize="20sp"
                             android:gravity="center"/>
@@ -333,6 +277,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.navigation.NavigationView>
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

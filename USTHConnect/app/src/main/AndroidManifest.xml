@@ -13,16 +13,10 @@
         android:theme="@style/Theme.USTHConnect"
         tools:targetApi="31">
         <activity
-            android:name=".Club_Activity"
+            android:name=".Resource_Activity"
             android:exported="false" />
         <activity
             android:name=".Study_Buddy_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Appointment_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Result_Activity"
             android:exported="false" />
         <activity
             android:name=".Campus_Activity"

@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("Islogin", MODE_PRIVATE);
-        boolean isLoggedIn = sharedPreferences.getBoolean("IsLoggedIn", false);
-
-        if (!isLoggedIn) {
-            navigateToLoginFragment();
-            return;
-        }
+//        SharedPreferences sharedPreferences = getSharedPreferences("Islogin", MODE_PRIVATE);
+//        boolean isLoggedIn = sharedPreferences.getBoolean("IsLoggedIn", false);
+//
+//        if (!isLoggedIn) {
+//            navigateToLoginFragment();
+//            return;
+//        }
 
         mviewPager = findViewById(R.id.view_pager);
         bottomNavigationView = findViewById(R.id.home_bottom_navigation);
@@ -98,12 +98,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void navigateToLoginFragment() {
 
-        Fragment loginFragment = new LoginFragment();
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(android.R.id.content, loginFragment);
-        transaction.commit();
-    }
+
+//    private void navigateToLoginFragment() {
+//
+//        Fragment loginFragment = new LoginFragment();
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.replace(android.R.id.content, loginFragment);
+//        transaction.commit();
+//    }
 
 }

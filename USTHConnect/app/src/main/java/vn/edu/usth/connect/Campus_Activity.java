@@ -45,15 +45,11 @@ public class Campus_Activity extends AppCompatActivity {
                 switch (position)
                 {
                     case 0:
-                        bottomNavigationView.getMenu().findItem(R.id.home_page).setChecked(true);
+                        bottomNavigationView.getMenu().findItem(R.id.building_page).setChecked(true);
                         break;
                     case 1:
-                        bottomNavigationView.getMenu().findItem(R.id.noti_page).setChecked(true);
+                        bottomNavigationView.getMenu().findItem(R.id.map_page).setChecked(true);
                         break;
-                    case 2:
-                        bottomNavigationView.getMenu().findItem(R.id.profile_page).setChecked(true);
-                        break;
-
                 }
             }
 
@@ -66,16 +62,12 @@ public class Campus_Activity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.home_page) {
+                if (item.getItemId() == R.id.building_page) {
                     mviewPager.setCurrentItem(0, true); // Switch to the first fragment
                     return true;
                 }
-                if (item.getItemId() == R.id.noti_page) {
+                if (item.getItemId() == R.id.map_page) {
                     mviewPager.setCurrentItem(1, true); // Switch to the first fragment
-                    return true;
-                }
-                if (item.getItemId() == R.id.profile_page) {
-                    mviewPager.setCurrentItem(2, true); // Switch to the first fragment
                     return true;
                 }
                 return false;
